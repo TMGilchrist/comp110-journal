@@ -6,6 +6,7 @@
 \doublespace
 \usepackage{amsmath}
 
+\usepackage{epigraph}
 \usepackage{url}
 \usepackage{graphicx}
 
@@ -19,32 +20,44 @@
 \maketitle
 \pagenumbering{arabic}
 
+\epigraph{What goes too long unchanged destroys itself.}{\textit{Ursula K. Le Guin}}
+
 \section{Introduction}
 
-Edsger Dijkstra's 1968 letter, Go To Statement Considered Harmful \cite{dijkstragoto}, is a now famous argument for the removal of the GoTo statement from programming languages, with the exception of ``perhaps, plain machine code" \cite[p. ~147]{dijkstragoto}. Dijkstra's strong wording and bold opinions caused a stir in the academic community and led to many further debates on the validity of the use of GoTo; eventually culminating in a shift towards Structured Programming and the more familiar programming constructs we see today.
+Edsger Dijkstra's 1968 letter, Go To Statement Considered Harmful \cite{dijkstragoto}, is a now famous argument for the removal of the GoTo statement from programming languages, with the exception of ``perhaps, plain machine code" \cite[p. ~147]{dijkstragoto}. Dijkstra's strong wording and bold opinions caused a stir in the academic community and led to many further debates on the validity of the use of GoTo, often parodying Dijkstra's use of the phrase ``Considered Harmful". The debates escalated quickly into emotional, impassioned arguments, often focusing solely on the merits of the GoTo statement. Traditionalist programmers were loath to change their ways and even more open minded academics were wary of Dijkstra's sweeping generalisation of GoTo as the tool of bad programmers. Eventually, the controversial discussions culminated in a shift towards Structured Programming and the more familiar programming constructs we see today.
 
 \section{GoTo}
 
 The GoTo statement is a common feature of many programming languages even today when use of it is not widespread. Using GoTo will move the program execution to a new part of the program, designated by line-number or a reference to a labelled section. Navigating a program in this way does hold certain benefits: Use of GoTo statements can improve readability of code, particularly since it eliminates the need for extra variables. \cite{casefor} 
 
-However, one of the primary reasons for the use of GoTo was a lack of block structures - self contained blocks of code that could contain both instructions and data. The absence of block structures necessitated the use of GoTo statements in early computing and the traditional reliance on it led to a reluctance to adopt other methods. (CITE) In addition, is has been argued that primitive control structures such as GoTo provide the building blocks for more complex functionality and allow inventive programmers to come up with new structures - thus progressing computing languages. \cite{casefor}
+% Citation needed below
+
+However, one of the primary reasons for the use of GoTo was a lack of block structures - self contained blocks of code that could contain both instructions and data. The absence of block structures necessitated the use of GoTo statements in early computing and the traditional reliance on it led to a reluctance to adopt other methods. In addition, is has been argued that primitive control structures such as GoTo provide the building blocks for more complex functionality and allow inventive programmers to come up with new structures - thus progressing computing languages. \cite{casefor}
 
 
 \section{Context}
 
-At the time of Dijkstra's letter, GoTo was widely used in programming in place of more modern structures such as Case statements and conditional if-else clauses. This was despite the existence of block structures and other ``Structured Programming" constructs in ALGOl 58 and ALGOL 60. \cite{algoldev} However, Dijkstra was not the first to voice concerns over flagrant use of the GoTo statement. Already, it had been proven that any program processable by a Turin Machine could be constructed without the use of GoTo statements (albeit with new variables and rewriting necessary), \cite{structuretheorem} however this was not yet regarded as reason enough to abandon traditional programming techniques.
+At the time of Dijkstra's letter, GoTo was widely used in programming in place of more modern structures such as Case statements and conditional if-else clauses. This was despite the existence of block structures and other ``Structured Programming" constructs in ALGOl 58 and ALGOL 60. \cite{algoldev} However, Dijkstra was not the first to voice concerns over flagrant use of the GoTo statement. Already, it had been proven that any program processable by a Turin Machine could be constructed without the use of GoTo statements (albeit with new variables and rewriting necessary) and Dijkstra cited this paper himself in his letter to the ACM. \cite{structuretheorem} However this proof alone was not regarded as reason enough to abandon traditional programming techniques.
 
-
+Structured Programming itself was a movement started in the late 19060's that gained popularity through the 1970's. Prior to this proposed paradigm, there were no `rules' to programming. Structured Programming maintained that all programs could be expressed through Sequence, Selection and Iteration, without the need for GoTo statements. Although these three principles were always at work behind any program, it was the ability for the programmer themselves to use them when coding.
 
 \section{Influence}
 
-The publication of Dijkstra's letter marked the beginning of what would become Structured Programming, a philosophy advocating the use of block structures and subroutines over GoTo statements. However, it also sparked massive controversy in the world of academic computing that continued for years after, with advocates on both sides of the debate. \cite{dijkstraharmful} \cite{compromise} \cite{structuredharmful} As Structured Programming became more popular, some critics pointed out that while it could be a useful tool, it did not miraculously fix all coding problems. Attention was drawn to Dijkstra's strong negative opinions of the GoTo statement, as well as the narrow-minded beliefs of many Structured Programming followers regarding the use of GoTo. \cite{structuredharmful}
+The publication of Dijkstra's letter marked the beginning of what would become Structured Programming, a philosophy advocating the use of block structures and subroutines over GoTo statements. However, it also sparked massive controversy in the world of academic computing that continued for years after, with advocates on both sides of the debate. \cite{dijkstraharmful} \cite{compromise} \cite{structuredharmful} In the years following the letter's publication in \textit{Communications of the ACM}, a massive debate raged back and forth across the pages of the journal. 
+
+Some of the outraged sparked over this topic may have been due to Dijkstra drawing direct correlation between the skill of a programmer and the number of GoTo statements used. This rather blunt observation no doubt insulted a vast number of his peers and would have made them indisposed to back his beliefs. One cannot help but wonder if a more tactful introduction to his letter would have gained Dijkstra less adversity. Regardless of Dijkstra's approach to the matter, it was inevitable that proposing such a radical shift in the paradigm of programming would rouse firm opposition. Even in the 21st century, the debate continues. \cite{debatecont} Widely used languages such as the C family and Pascal include GoTo statements and opinions still differ on what should be taught as best practice.
+
+As Structured Programming became more popular, some critics pointed out that while it could be a useful tool, it did not miraculously fix all coding problems. Attention was drawn to Dijkstra's strong negative opinions of the GoTo statement, as well as the narrow-minded beliefs of many Structured Programming followers regarding the use of GoTo. \cite{structuredharmful} 
+
+During the 19070's the debate became increasingly focused on the matter of GoTo instead of the wider principles of Structured Programming. The perceived hatred for GoTo statements incited similar anger in those who encouraged the use of GoTo.
 
 \section{Conclusion}
 
-Overall, although his criticisms of GoTo were not necessarily unique or even incredibly revolutionary, the attention his argument gained brought the issue into the spotlight. Although his highly bold, passionate statements in the letter such as - ``disastrous effects" and the need to ``abolish" GoTo statements \cite[p. ~147]{dijkstragoto} -  made his argument infamous in academic circles, this ironically furthered his cause. The notoriety he gained and the publicity his argument was subject to, undoubtedly contributed to the fall of traditional programming. The resulting discussion and research into the topic were instrumental in the development of more sophisticated programming methods. (CITE)
+% Extra citations for this section needed
 
-In modern programming, the utility of GoTo in program structure is almost fully overshadowed by Object Oriented approaches which allow even complex programs to be abstracted into readable and easily-adapted forms. (CITE) However, there is still value in the availability of GoTo for specialist cases, such as fall-through in C case statements or error handling in nested loops. \cite{useofgoto}
+Overall, although his criticisms of GoTo were not necessarily unique or even incredibly revolutionary, the attention his argument gained brought the issue into the spotlight. Although his highly bold, passionate statements in the letter such as - ``disastrous effects" and the need to ``abolish" GoTo statements \cite[p. ~147]{dijkstragoto} -  made his argument infamous in academic circles, this ironically furthered his cause. The notoriety he gained and the publicity his argument was subject to, undoubtedly contributed to the fall of traditional programming. The resulting discussion and research into the topic were instrumental in the development of more sophisticated programming methods.
+
+In modern programming, the utility of GoTo in program structure is almost fully overshadowed by Object Oriented approaches which allow even complex programs to be abstracted into readable and easily-adapted forms. However, there is still value in the availability of GoTo for specialist cases, such as fall-through in C case statements or error handling in nested loops. \cite{useofgoto}
 
 \bibliography{references}
 \bibliographystyle{ieeetran}
